@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PalletColor - Gerador de Paletas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🎨PalletColor</h1>
+    <p>Gere cores aleatórias ou extraia de uma imagem!</p>
+  </header>
+  <main>
+    <section class="controls">
+      <button id="generate">Gerar Nova Paleta</button>
+      <label for="imageInput" class="upload-button">Carregar Imagem</label>
+      <input type="file" id="imageInput" accept="image/*" style="display: none;">
+    </section>
+    <section class="palette">
+      <div class="card" onclick="copyToClipboard('hex1')">
+        <div class="color" id="color1"></div>
+        <p class="hex-code" id="hex1"></p>
+      </div>
+      <div class="card" onclick="copyToClipboard('hex2')">
+        <div class="color" id="color2"></div>
+        <p class="hex-code" id="hex2"></p>
+      </div>
+      <div class="card" onclick="copyToClipboard('hex3')">
+        <div class="color" id="color3"></div>
+        <p class="hex-code" id="hex3"></p>
+      </div>
+      <div class="card" onclick="copyToClipboard('hex4')">
+        <div class="color" id="color4"></div>
+        <p class="hex-code" id="hex4"></p>
+      </div>
+      <div class="card" onclick="copyToClipboard('hex5')">
+        <div class="color" id="color5"></div>
+        <p class="hex-code" id="hex5"></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 PalletColor. Todos os direitos reservados.</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
